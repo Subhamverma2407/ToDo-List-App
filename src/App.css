@@ -1,38 +1,145 @@
-.App {
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 36%);
+  height: 100vh;
+}
+
+.container {
   text-align: center;
+  margin: 20px 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.head-section h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-section {
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  border: none;
+  width: 3rem;
+  height: 2.5rem;
+  outline: none;
+  border-radius: 5px;
+}
+
+.add-btn {
+  background: #5ebd6d;
+}
+
+.add-btn:hover {
+  cursor: pointer;
+  background: #5fd471;
+}
+
+.text-input {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 500px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.todo-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.todo-item-name {
+  text-align: left;
+  width: 80%;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 4px 4px 4px 20px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.completed {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-complete {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.4px;
+  background: #5ebd6d;
+  color: #fff;
+}
+
+.btn-complete:hover {
+  cursor: pointer;
+  background: #5fd471;
+}
+
+.btn-delete {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.4px;
+  color: #fff;
+  font-size: 0.2rem;
+  background: #e72052;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background: #f3527b;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    text-align: center;
+    margin: 2rem 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .head-section h1 {
+    font-size: 3rem;
+  }
+  .todo-item {
+    width: 100%;
+  }
+
+  .todo-item-name {
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 4px 4px 4px 8px;
   }
 }
