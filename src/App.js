@@ -32,7 +32,6 @@ class App extends Component {
   };
 
   onAddHandler = () => {
-    window.navigator.vibrate(100);
     const todo = [...this.state.todo];
     todo.push({
       name: this.state.input.trim(),
@@ -43,7 +42,6 @@ class App extends Component {
   };
 
   onDeleteHandler = (key) => {
-    window.navigator.vibrate(100);
     const todo = this.state.todo.filter((item) => item.key !== key);
     this.setState({ todo }, this.saveToLocal);
   };
