@@ -22,7 +22,6 @@ class App extends Component {
   };
 
   onCompleteHandler = (key) => {
-    window.navigator.vibrate(100);
     const todo = [...this.state.todo].map((item) => {
       if (item.key === key) {
         item.isCompleted = !item.isCompleted;
